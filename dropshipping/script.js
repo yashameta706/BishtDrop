@@ -1,5 +1,211 @@
+// BISHTDROP JAVASCRIPT
 
-Action: {"type": "mcp_tool", "tool_name": "mcp_bulk_file_writer", "tool_arguments": {"files": [{"content": "/* BishtDrop E-commerce - Main Styles */\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --orange-500: #FF6B35;\n  --orange-600: #F77F00;\n  --black: #0A0A0A;\n  --gray-900: #1A1A1A;\n  --gray-800: #2A2A2A;\n  --gray-700: #3A3A3A;\n  --gray-600: #4A4A4A;\n  --gray-500: #6B7280;\n  --gray-400: #9CA3AF;\n  --gray-300: #D1D5DB;\n  --gray-200: #E5E7EB;\n  --gray-100: #F3F4F6;\n  --gray-50: #F9FAFB;\n  --white: #FFFFFF;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;\n  line-height: 1.6;\n  color: var(--gray-900);\n  background: var(--white);\n}\n\n/* Navigation */\n.navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1000;\n  background: rgba(10, 10, 10, 0.95);\n  backdrop-filter: blur(12px);\n  border-bottom: 1px solid rgba(255, 107, 53, 0.2);\n}\n\n.navbar-container {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 0 1rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  height: 64px;\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  gap: 0.5rem;\n  text-decoration: none;\n  transition: transform 0.3s;\n}\n\n.logo:hover {\n  transform: scale(1.05);\n}\n\n.logo-icon {\n  width: 40px;\n  height: 40px;\n  background: linear-gradient(135deg, var(--orange-500), var(--orange-600));\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  font-weight: bold;\n  font-size: 1.25rem;\n}\n\n.logo-text {\n  color: white;\n  font-weight: bold;\n  font-size: 1.25rem;\n}\n\n.nav-menu {\n  display: flex;\n  align-items: center;\n  gap: 0.25rem;\n  list-style: none;\n}\n\n.nav-link {\n  padding: 0.5rem 1rem;\n  color: var(--gray-300);\n  text-decoration: none;\n  border-radius: 8px;\n  font-weight: 500;\n  transition: all 0.3s;\n}\n\n.nav-link:hover,\n.nav-link.active {\n  background: var(--orange-500);\n  color: white;\n}\n\n.nav-actions {\n  display: flex;\n  align-items: center;\n  gap: 0.75rem;\n}\n\n.icon-btn {\n  width: 40px;\n  height: 40px;\n  border: none;\n  background: transparent;\n  color: var(--gray-300);\n  cursor: pointer;\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.3s;\n}\n\n.icon-btn:hover {\n  background: rgba(255, 255, 255, 0.05);\n  color: white;\n}\n\n.btn-primary {\n  padding: 0.5rem 1.5rem;\n  background: var(--orange-500);\n  color: white;\n  border: none;\n  border-radius: 8px;\n  font-weight: 500;\n  cursor: pointer;\n  transition: all 0.3s;\n}\n\n.btn-primary:hover {\n  background: var(--orange-600);\n  transform: translateY(-2px);\n}\n\n.mobile-menu-btn {\n  display: none;\n  background: transparent;\n  border: none;\n  color: white;\n  font-size: 1.5rem;\n  cursor: pointer;\n}\n\n/* Hero Section */\n.hero {\n  position: relative;\n  padding: 120px 1rem 80px;\n  background: linear-gradient(135deg, var(--black), var(--gray-900), var(--black));\n  overflow: hidden;\n}\n\n.hero::before {\n  content: '';\n  position: absolute;\n  top: 80px;\n  left: 40px;\n  width: 288px;\n  height: 288px;\n  background: var(--orange-500);\n  opacity: 0.2;\n  border-radius: 50%;\n  filter: blur(80px);\n}\n\n.hero::after {\n  content: '';\n  position: absolute;\n  bottom: 80px;\n  right: 40px;\n  width: 384px;\n  height: 384px;\n  background: var(--orange-600);\n  opacity: 0.1;\n  border-radius: 50%;\n  filter: blur(80px);\n}\n\n.hero-content {\n  position: relative;\n  z-index: 10;\n  max-width: 1280px;\n  margin: 0 auto;\n  text-align: center;\n}\n\n.hero-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.5rem;\n  padding: 0.5rem 1rem;\n  background: rgba(255, 107, 53, 0.1);\n  border: 1px solid rgba(255, 107, 53, 0.2);\n  border-radius: 24px;\n  color: var(--orange-500);\n  font-size: 0.875rem;\n  font-weight: 500;\n  margin-bottom: 2rem;\n}\n\n.hero h1 {\n  font-size: 3.5rem;\n  font-weight: bold;\n  color: white;\n  line-height: 1.2;\n  margin-bottom: 1.5rem;\n}\n\n.hero .gradient-text {\n  background: linear-gradient(to right, var(--orange-500), var(--orange-400));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n\n.hero p {\n  font-size: 1.25rem;\n  color: var(--gray-300);\n  max-width: 42rem;\n  margin: 0 auto 2.5rem;\n}\n\n.hero-actions {\n  display: flex;\n  gap: 1rem;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n\n.btn-lg {\n  padding: 0.75rem 2rem;\n  font-size: 1.125rem;\n  border-radius: 8px;\n  font-weight: 500;\n  cursor: pointer;\n  transition: all 0.3s;\n  text-decoration: none;\n  display: inline-flex;\n  align-items: center;\n  gap: 0.5rem;\n  border: none;\n}\n\n.btn-orange {\n  background: var(--orange-500);\n  color: white;\n}\n\n.btn-orange:hover {\n  background: var(--orange-600);\n  transform: translateY(-2px);\n}\n\n.btn-outline {\n  background: rgba(255, 255, 255, 0.1);\n  color: white;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n  backdrop-filter: blur(8px);\n}\n\n.btn-outline:hover {\n  background: rgba(255, 255, 255, 0.2);\n}\n\n/* Stats Section */\n.stats {\n  padding: 3rem 1rem;\n  background: linear-gradient(to right, #FFF7ED, white);\n  border-top: 1px solid #FFEDD5;\n  border-bottom: 1px solid #FFEDD5;\n}\n\n.stats-container {\n  max-width: 1280px;\n  margin: 0 auto;\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n  gap: 2rem;\n  text-align: center;\n}\n\n.stat-item h3 {\n  font-size: 2.5rem;\n  font-weight: bold;\n  color: var(--orange-500);\n  margin-bottom: 0.5rem;\n}\n\n.stat-item p {\n  color: var(--gray-600);\n  font-weight: 500;\n}\n\n/* Section */\n.section {\n  padding: 5rem 1rem;\n}\n\n.section-alt {\n  background: linear-gradient(to bottom, #FFF7ED, white);\n}\n\n.container {\n  max-width: 1280px;\n  margin: 0 auto;\n}\n\n.section-header {\n  text-align: center;\n  margin-bottom: 3rem;\n}\n\n.section-header h2 {\n  font-size: 2.5rem;\n  font-weight: bold;\n  color: var(--gray-900);\n  margin-bottom: 1rem;\n}\n\n.section-header p {\n  font-size: 1.25rem;\n  color: var(--gray-600);\n}\n\n/* Grid Layouts */\n.grid {\n  display: grid;\n  gap: 2rem;\n}\n\n.grid-3 {\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n}\n\n.grid-4 {\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n}\n\n/* Cards */\n.card {\n  background: white;\n  border: 1px solid var(--gray-200);\n  border-radius: 12px;\n  overflow: hidden;\n  transition: all 0.3s;\n}\n\n.card:hover {\n  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n  border-color: var(--orange-500);\n}\n\n.card-img {\n  width: 100%;\n  aspect-ratio: 1;\n  object-fit: cover;\n  transition: transform 0.5s;\n}\n\n.card:hover .card-img {\n  transform: scale(1.1);\n}\n\n.card-img-container {\n  position: relative;\n  overflow: hidden;\n}\n\n.card-badge {\n  position: absolute;\n  top: 12px;\n  right: 12px;\n  background: var(--orange-500);\n  color: white;\n  padding: 0.25rem 0.75rem;\n  border-radius: 24px;\n  font-size: 0.875rem;\n  font-weight: 600;\n}\n\n.card-content {\n  padding: 1.25rem;\n}\n\n.card-category {\n  color: var(--orange-500);\n  font-size: 0.875rem;\n  font-weight: 500;\n  margin-bottom: 0.5rem;\n}\n\n.card-title {\n  font-size: 1.125rem;\n  font-weight: 600;\n  color: var(--gray-900);\n  margin-bottom: 0.5rem;\n}\n\n.card-text {\n  color: var(--gray-600);\n  font-size: 0.875rem;\n  margin-bottom: 1rem;\n}\n\n.card-footer {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.rating {\n  display: flex;\n  align-items: center;\n  gap: 0.25rem;\n}\n\n.star {\n  color: var(--gray-300);\n  font-size: 1rem;\n}\n\n.star.filled {\n  color: var(--orange-500);\n}\n\n/* Feature Cards */\n.feature-card {\n  background: white;\n  border: 1px solid var(--gray-200);\n  border-radius: 12px;\n  padding: 2rem;\n  text-align: center;\n  transition: all 0.3s;\n}\n\n.feature-card:hover {\n  border-color: var(--orange-500);\n  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);\n}\n\n.feature-icon {\n  width: 64px;\n  height: 64px;\n  background: linear-gradient(135deg, var(--orange-500), var(--orange-600));\n  border-radius: 12px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0 auto 1.5rem;\n  color: white;\n  font-size: 2rem;\n}\n\n.feature-card h3 {\n  font-size: 1.25rem;\n  font-weight: bold;\n  color: var(--gray-900);\n  margin-bottom: 0.75rem;\n}\n\n.feature-card p {\n  color: var(--gray-600);\n}\n\n/* Footer */\n.footer {\n  background: var(--black);\n  color: var(--gray-300);\n  border-top: 1px solid rgba(255, 107, 53, 0.2);\n}\n\n.newsletter {\n  background: linear-gradient(to right, rgba(255, 107, 53, 0.1), rgba(247, 127, 0, 0.1));\n  border-bottom: 1px solid rgba(255, 107, 53, 0.2);\n  padding: 3rem 1rem;\n}\n\n.newsletter-container {\n  max-width: 1280px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 2rem;\n  flex-wrap: wrap;\n}\n\n.newsletter h3 {\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: white;\n  margin-bottom: 0.5rem;\n}\n\n.newsletter p {\n  color: var(--gray-400);\n}\n\n.newsletter-form {\n  display: flex;\n  gap: 0.5rem;\n  flex: 1;\n  max-width: 400px;\n}\n\n.newsletter-form input {\n  flex: 1;\n  padding: 0.75rem 1rem;\n  border: 1px solid rgba(255, 107, 53, 0.3);\n  background: rgba(255, 255, 255, 0.05);\n  color: white;\n  border-radius: 8px;\n  font-size: 1rem;\n}\n\n.newsletter-form input::placeholder {\n  color: var(--gray-500);\n}\n\n.footer-content {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 3rem 1rem;\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  gap: 2rem;\n}\n\n.footer-logo {\n  display: flex;\n  align-items: center;\n  gap: 0.5rem;\n  margin-bottom: 1rem;\n}\n\n.footer h4 {\n  color: white;\n  font-weight: 600;\n  margin-bottom: 1rem;\n}\n\n.footer ul {\n  list-style: none;\n}\n\n.footer ul li {\n  margin-bottom: 0.5rem;\n}\n\n.footer a {\n  color: var(--gray-300);\n  text-decoration: none;\n  transition: color 0.3s;\n}\n\n.footer a:hover {\n  color: var(--orange-500);\n}\n\n.social-links {\n  display: flex;\n  gap: 0.75rem;\n  margin-top: 1rem;\n}\n\n.social-btn {\n  width: 36px;\n  height: 36px;\n  border-radius: 8px;\n  background: rgba(255, 255, 255, 0.05);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: var(--gray-300);\n  transition: all 0.3s;\n  text-decoration: none;\n}\n\n.social-btn:hover {\n  background: var(--orange-500);\n  color: white;\n}\n\n.footer-bottom {\n  border-top: 1px solid rgba(255, 107, 53, 0.2);\n  padding: 1.5rem 1rem;\n}\n\n.footer-bottom-content {\n  max-width: 1280px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 1rem;\n  flex-wrap: wrap;\n  font-size: 0.875rem;\n}\n\n.footer-links {\n  display: flex;\n  gap: 1.5rem;\n}\n\n/* Forms */\n.form-group {\n  margin-bottom: 1.5rem;\n}\n\n.form-label {\n  display: block;\n  font-weight: 500;\n  color: var(--gray-700);\n  margin-bottom: 0.5rem;\n}\n\n.form-input,\n.form-textarea {\n  width: 100%;\n  padding: 0.75rem 1rem;\n  border: 1px solid var(--gray-300);\n  border-radius: 8px;\n  font-size: 1rem;\n  font-family: inherit;\n  transition: border-color 0.3s;\n}\n\n.form-input:focus,\n.form-textarea:focus {\n  outline: none;\n  border-color: var(--orange-500);\n}\n\n.form-textarea {\n  resize: vertical;\n  min-height: 150px;\n}\n\n/* Responsive */\n@media (max-width: 768px) {\n  .nav-menu,\n  .nav-actions {\n    display: none;\n  }\n  \n  .mobile-menu-btn {\n    display: block;\n  }\n  \n  .hero h1 {\n    font-size: 2rem;\n  }\n  \n  .hero p {\n    font-size: 1rem;\n  }\n  \n  .section-header h2 {\n    font-size: 2rem;\n  }\n  \n  .grid-3,\n  .grid-4 {\n    grid-template-columns: 1fr;\n  }\n}\n\n/* Utilities */\n.text-center {\n  text-align: center;\n}\n\n.mt-4 {\n  margin-top: 2.5rem;\n}\n\n.mb-4 {\n  margin-bottom: 2.5rem;\n}\n\nbutton:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* Toast Notification */\n.toast {\n  position: fixed;\n  bottom: 2rem;\n  right: 2rem;\n  background: white;\n  padding: 1rem 1.5rem;\n  border-radius: 8px;\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);\n  border-left: 4px solid var(--orange-500);\n  z-index: 9999;\n  animation: slideIn 0.3s ease-out;\n}\n\n@keyframes slideIn {\n  from {\n    transform: translateX(100%);\n    opacity: 0;\n  }\n  to {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}\n\n.toast-title {\n  font-weight: 600;\n  color: var(--gray-900);\n  margin-bottom: 0.25rem;\n}\n\n.toast-message {\n  color: var(--gray-600);\n  font-size: 0.875rem;\n}", "path": "/app/html_website/styles.css"}, {"content": "// BishtDrop E-commerce - JavaScript\n\n// Mobile Menu Toggle\nfunction toggleMobileMenu() {\n  const menu = document.getElementById('mobileMenu');\n  if (menu) {\n    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';\n  }\n}\n\n// Set Active Nav Link\nfunction setActiveNavLink() {\n  const currentPage = window.location.pathname.split('/').pop() || 'index.html';\n  const navLinks = document.querySelectorAll('.nav-link');\n  \n  navLinks.forEach(link => {\n    const href = link.getAttribute('href');\n    if (href === currentPage || (currentPage === '' && href === 'index.html')) {\n      link.classList.add('active');\n    } else {\n      link.classList.remove('active');\n    }\n  });\n}\n\n// Product Filter (for products page)\nlet allProducts = [];\n\nfunction filterProducts() {\n  const searchQuery = document.getElementById('searchInput')?.value.toLowerCase() || '';\n  const categoryFilter = document.getElementById('categoryFilter')?.value || 'all';\n  \n  const filtered = allProducts.filter(product => {\n    const matchesSearch = product.name.toLowerCase().includes(searchQuery);\n    const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;\n    return matchesSearch && matchesCategory;\n  });\n  \n  renderProducts(filtered);\n}\n\nfunction renderProducts(products) {\n  const container = document.getElementById('productsGrid');\n  if (!container) return;\n  \n  if (products.length === 0) {\n    container.innerHTML = '<div style=\"grid-column: 1/-1; text-align: center; padding: 3rem;\"><p style=\"color: var(--gray-500); font-size: 1.125rem;\">No products found matching your criteria.</p></div>';\n    return;\n  }\n  \n  container.innerHTML = products.map(product => `\n    <div class=\"card\">\n      <div class=\"card-img-container\">\n        <img src=\"${product.image}\" alt=\"${product.name}\" class=\"card-img\">\n        <div class=\"card-badge\">$${product.price}</div>\n        ${product.inStock ? '<div class=\"card-badge\" style=\"left: 12px; right: auto; background: #10B981;\">In Stock</div>' : ''}\n      </div>\n      <div class=\"card-content\">\n        <div class=\"card-category\">${product.category}</div>\n        <h3 class=\"card-title\">${product.name}</h3>\n        <p class=\"card-text\">${product.description}</p>\n        <div class=\"card-footer\">\n          <div class=\"rating\">\n            ${generateStars(product.rating)}\n            <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(${product.rating})</span>\n          </div>\n          <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(${product.id})\">\n            Add to Cart\n          </button>\n        </div>\n      </div>\n    </div>\n  `).join('');\n}\n\nfunction generateStars(rating) {\n  let stars = '';\n  for (let i = 1; i <= 5; i++) {\n    stars += `<span class=\"star ${i <= Math.floor(rating) ? 'filled' : ''}\">\u2605</span>`;\n  }\n  return stars;\n}\n\n// Add to Cart (mock)\nfunction addToCart(productId) {\n  showToast('Success!', 'Product added to cart');\n}\n\n// Contact Form Submit\nfunction handleContactSubmit(event) {\n  event.preventDefault();\n  \n  const form = event.target;\n  const formData = new FormData(form);\n  \n  // Mock submission\n  console.log('Contact form submitted:', Object.fromEntries(formData));\n  \n  showToast('Message Sent!', \"We'll get back to you within 24 hours.\");\n  form.reset();\n}\n\n// Newsletter Subscribe\nfunction handleNewsletterSubmit(event) {\n  event.preventDefault();\n  \n  const form = event.target;\n  const email = form.querySelector('input[type=\"email\"]').value;\n  \n  // Mock submission\n  console.log('Newsletter subscription:', email);\n  \n  showToast('Subscribed!', 'Thank you for subscribing to our newsletter.');\n  form.reset();\n}\n\n// Toast Notification\nfunction showToast(title, message) {\n  const existingToast = document.querySelector('.toast');\n  if (existingToast) {\n    existingToast.remove();\n  }\n  \n  const toast = document.createElement('div');\n  toast.className = 'toast';\n  toast.innerHTML = `\n    <div class=\"toast-title\">${title}</div>\n    <div class=\"toast-message\">${message}</div>\n  `;\n  \n  document.body.appendChild(toast);\n  \n  setTimeout(() => {\n    toast.remove();\n  }, 3000);\n}\n\n// Smooth Scroll\nfunction smoothScroll(targetId) {\n  const element = document.getElementById(targetId);\n  if (element) {\n    element.scrollIntoView({ behavior: 'smooth' });\n  }\n}\n\n// Initialize on page load\ndocument.addEventListener('DOMContentLoaded', function() {\n  setActiveNavLink();\n  \n  // Initialize products if on products page\n  if (document.getElementById('productsGrid')) {\n    initializeProducts();\n  }\n});\n\nfunction initializeProducts() {\n  allProducts = [\n    {\n      id: 1,\n      name: \"Premium Wireless Earbuds\",\n      category: \"Electronics\",\n      price: 79.99,\n      image: \"https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500\",\n      description: \"High-quality wireless earbuds with noise cancellation\",\n      rating: 4.5,\n      inStock: true\n    },\n    {\n      id: 2,\n      name: \"Smart Fitness Watch\",\n      category: \"Electronics\",\n      price: 129.99,\n      image: \"https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500\",\n      description: \"Track your fitness goals with style\",\n      rating: 4.8,\n      inStock: true\n    },\n    {\n      id: 3,\n      name: \"Portable Phone Charger\",\n      category: \"Electronics\",\n      price: 34.99,\n      image: \"https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500\",\n      description: \"20000mAh fast charging power bank\",\n      rating: 4.3,\n      inStock: true\n    },\n    {\n      id: 4,\n      name: \"LED Desk Lamp\",\n      category: \"Home & Office\",\n      price: 45.99,\n      image: \"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500\",\n      description: \"Adjustable brightness LED lamp\",\n      rating: 4.6,\n      inStock: true\n    },\n    {\n      id: 5,\n      name: \"Yoga Mat Set\",\n      category: \"Sports & Fitness\",\n      price: 39.99,\n      image: \"https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500\",\n      description: \"Non-slip yoga mat with carrying strap\",\n      rating: 4.7,\n      inStock: true\n    },\n    {\n      id: 6,\n      name: \"Water Bottle 1L\",\n      category: \"Sports & Fitness\",\n      price: 24.99,\n      image: \"https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500\",\n      description: \"Insulated stainless steel water bottle\",\n      rating: 4.4,\n      inStock: true\n    }\n  ];\n  \n  renderProducts(allProducts);\n}", "path": "/app/html_website/script.js"}]}}
-Observation: Successfully wrote 2 files:
-- /app/html_website/styles.css
-- /app/html_website/script.js
+// MOBILE MENU TOGGLE
+function toggleMobileMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+
+    if (navMenu.style.display === "flex") {
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "flex";
+        navMenu.style.flexDirection = "column";
+        navMenu.style.background = "#000";
+        navMenu.style.position = "absolute";
+        navMenu.style.top = "70px";
+        navMenu.style.right = "20px";
+        navMenu.style.padding = "20px";
+        navMenu.style.borderRadius = "10px";
+    }
+}
+
+// ADD TO CART
+function addToCart(productId) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push(productId);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showToast("Product Added To Cart 🛒");
+}
+
+// TOAST MESSAGE
+function showToast(message) {
+
+    const toast = document.createElement("div");
+
+    toast.innerText = message;
+
+    toast.style.position = "fixed";
+    toast.style.bottom = "20px";
+    toast.style.right = "20px";
+    toast.style.background = "#ff6b35";
+    toast.style.color = "#fff";
+    toast.style.padding = "15px 25px";
+    toast.style.borderRadius = "10px";
+    toast.style.fontWeight = "bold";
+    toast.style.zIndex = "9999";
+    toast.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
+
+// ACTIVE NAV LINK
+function setActiveLink() {
+
+    const links = document.querySelectorAll(".nav-link");
+
+    links.forEach(link => {
+
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+
+    });
+}
+
+// NEWSLETTER SUBMIT
+function handleNewsletterSubmit(event) {
+
+    event.preventDefault();
+
+    showToast("Thanks For Subscribing ❤️");
+
+    event.target.reset();
+}
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+});
+
+// PAGE LOAD
+window.onload = () => {
+
+    setActiveLink();
+
+    console.log("BishtDrop Website Loaded Successfully 🚀");
+
+};
+
+// SIMPLE SEARCH FILTER
+function searchProducts() {
+
+    const input = document.getElementById("searchInput");
+
+    if(!input) return;
+
+    const filter = input.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+        const title = card.querySelector(".card-title");
+
+        if(title.innerText.toLowerCase().includes(filter)) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+// DARK MODE TOGGLE
+function toggleDarkMode() {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")) {
+
+        localStorage.setItem("theme", "dark");
+
+    } else {
+
+        localStorage.setItem("theme", "light");
+
+    }
+
+}
+
+// LOAD SAVED THEME
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "dark") {
+
+    document.body.classList.add("dark-mode");
+
+}
+
+// BACK TO TOP BUTTON
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "⬆";
+
+topButton.style.position = "fixed";
+topButton.style.bottom = "20px";
+topButton.style.left = "20px";
+topButton.style.width = "50px";
+topButton.style.height = "50px";
+topButton.style.border = "none";
+topButton.style.borderRadius = "50%";
+topButton.style.background = "#ff6b35";
+topButton.style.color = "#fff";
+topButton.style.fontSize = "20px";
+topButton.style.cursor = "pointer";
+topButton.style.display = "none";
+topButton.style.zIndex = "999";
+
+document.body.appendChild(topButton);
+
+// SHOW BUTTON ON SCROLL
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+
+        topButton.style.display = "block";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+// SCROLL TO TOP
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
