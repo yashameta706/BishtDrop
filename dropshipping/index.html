@@ -1,457 +1,409 @@
-Now let me create the HTML pages:
-Action: file_editor create /app/html_website/index.html --file-text "<!DOCTYPE html>
-<html lang=\"en\">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <title>BishtDrop - Shop Premium Products At Amazing Prices</title>
-    <meta name=\"description\" content=\"Discover thousands of quality products delivered right to your door. Shop with confidence, fast shipping, and easy returns.\">
-    <link rel=\"stylesheet\" href=\"styles.css\">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BishtDrop - Premium Shopping Store</title>
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class=\"navbar\">
-        <div class=\"navbar-container\">
-            <a href=\"index.html\" class=\"logo\">
-                <div class=\"logo-icon\">BD</div>
-                <span class=\"logo-text\">BishtDrop</span>
-            </a>
-            
-            <ul class=\"nav-menu\">
-                <li><a href=\"index.html\" class=\"nav-link\">Home</a></li>
-                <li><a href=\"products.html\" class=\"nav-link\">Products</a></li>
-                <li><a href=\"services.html\" class=\"nav-link\">Services</a></li>
-                <li><a href=\"about.html\" class=\"nav-link\">About</a></li>
-                <li><a href=\"contact.html\" class=\"nav-link\">Contact</a></li>
-            </ul>
-            
-            <div class=\"nav-actions\">
-                <button class=\"icon-btn\" aria-label=\"Shopping Cart\">🛒</button>
-                <button class=\"icon-btn\" aria-label=\"User Account\">👤</button>
-                <button class=\"btn-primary\">Get Started</button>
-            </div>
-            
-            <button class=\"mobile-menu-btn\" onclick=\"toggleMobileMenu()\" aria-label=\"Menu\">☰</button>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class=\"hero\">
-        <div class=\"hero-content\">
-            <div class=\"hero-badge\">
-                <span>⚡</span>
-                <span>Free Shipping on Orders Over $50</span>
-            </div>
-            
-            <h1>
-                Shop Premium Products<br>
-                <span class=\"gradient-text\">At Amazing Prices</span>
-            </h1>
-            
-            <p>
-                Discover thousands of quality products delivered right to your door. 
-                Shop with confidence, fast shipping, and easy returns.
-            </p>
-            
-            <div class=\"hero-actions\">
-                <a href=\"products.html\" class=\"btn-lg btn-orange\">
-                    Shop Now →
-                </a>
-                <button class=\"btn-lg btn-outline\">New Arrivals</button>
-            </div>
-        </div>
-    </section>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
 
-    <!-- Stats Section -->
-    <section class=\"stats\">
-        <div class=\"stats-container\">
-            <div class=\"stat-item\">
-                <h3>5000+</h3>
-                <p>Products Available</p>
-            </div>
-            <div class=\"stat-item\">
-                <h3>10,000+</h3>
-                <p>Happy Customers</p>
-            </div>
-            <div class=\"stat-item\">
-                <h3>45+</h3>
-                <p>Countries Shipping</p>
-            </div>
-            <div class=\"stat-item\">
-                <h3>3-5 Days</h3>
-                <p>Avg. Delivery Time</p>
-            </div>
-        </div>
-    </section>
+    <a href="index.html" class="logo">
+      <div class="logo-icon">BD</div>
+      <span class="logo-text">BishtDrop</span>
+    </a>
 
-    <!-- Featured Products -->
-    <section class=\"section\">
-        <div class=\"container\">
-            <div class=\"section-header\">
-                <h2>Featured Products</h2>
-                <p>Explore our curated selection of trending products</p>
-            </div>
-            
-            <div class=\"grid grid-3\">
-                <!-- Product 1 -->
-                <div class=\"card\">
-                    <div class=\"card-img-container\">
-                        <img src=\"https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500\" alt=\"Premium Wireless Earbuds\" class=\"card-img\">
-                        <div class=\"card-badge\">$79.99</div>
-                    </div>
-                    <div class=\"card-content\">
-                        <div class=\"card-category\">Electronics</div>
-                        <h3 class=\"card-title\">Premium Wireless Earbuds</h3>
-                        <p class=\"card-text\">High-quality wireless earbuds with noise cancellation</p>
-                        <div class=\"card-footer\">
-                            <div class=\"rating\">
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star\">★</span>
-                                <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(4.5)</span>
-                            </div>
-                            <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(1)\">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class=\"card\">
-                    <div class=\"card-img-container\">
-                        <img src=\"https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500\" alt=\"Smart Fitness Watch\" class=\"card-img\">
-                        <div class=\"card-badge\">$129.99</div>
-                    </div>
-                    <div class=\"card-content\">
-                        <div class=\"card-category\">Electronics</div>
-                        <h3 class=\"card-title\">Smart Fitness Watch</h3>
-                        <p class=\"card-text\">Track your fitness goals with style</p>
-                        <div class=\"card-footer\">
-                            <div class=\"rating\">
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(4.8)</span>
-                            </div>
-                            <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(2)\">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class=\"card\">
-                    <div class=\"card-img-container\">
-                        <img src=\"https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500\" alt=\"Portable Phone Charger\" class=\"card-img\">
-                        <div class=\"card-badge\">$34.99</div>
-                    </div>
-                    <div class=\"card-content\">
-                        <div class=\"card-category\">Electronics</div>
-                        <h3 class=\"card-title\">Portable Phone Charger</h3>
-                        <p class=\"card-text\">20000mAh fast charging power bank</p>
-                        <div class=\"card-footer\">
-                            <div class=\"rating\">
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star\">★</span>
-                                <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(4.3)</span>
-                            </div>
-                            <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(3)\">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class=\"card\">
-                    <div class=\"card-img-container\">
-                        <img src=\"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500\" alt=\"LED Desk Lamp\" class=\"card-img\">
-                        <div class=\"card-badge\">$45.99</div>
-                    </div>
-                    <div class=\"card-content\">
-                        <div class=\"card-category\">Home & Office</div>
-                        <h3 class=\"card-title\">LED Desk Lamp</h3>
-                        <p class=\"card-text\">Adjustable brightness LED lamp</p>
-                        <div class=\"card-footer\">
-                            <div class=\"rating\">
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(4.6)</span>
-                            </div>
-                            <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(4)\">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 5 -->
-                <div class=\"card\">
-                    <div class=\"card-img-container\">
-                        <img src=\"https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500\" alt=\"Yoga Mat Set\" class=\"card-img\">
-                        <div class=\"card-badge\">$39.99</div>
-                    </div>
-                    <div class=\"card-content\">
-                        <div class=\"card-category\">Sports & Fitness</div>
-                        <h3 class=\"card-title\">Yoga Mat Set</h3>
-                        <p class=\"card-text\">Non-slip yoga mat with carrying strap</p>
-                        <div class=\"card-footer\">
-                            <div class=\"rating\">
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(4.7)</span>
-                            </div>
-                            <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(5)\">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 6 -->
-                <div class=\"card\">
-                    <div class=\"card-img-container\">
-                        <img src=\"https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500\" alt=\"Water Bottle 1L\" class=\"card-img\">
-                        <div class=\"card-badge\">$24.99</div>
-                    </div>
-                    <div class=\"card-content\">
-                        <div class=\"card-category\">Sports & Fitness</div>
-                        <h3 class=\"card-title\">Water Bottle 1L</h3>
-                        <p class=\"card-text\">Insulated stainless steel water bottle</p>
-                        <div class=\"card-footer\">
-                            <div class=\"rating\">
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star filled\">★</span>
-                                <span class=\"star\">★</span>
-                                <span style=\"font-size: 0.875rem; color: var(--gray-600); margin-left: 0.5rem;\">(4.4)</span>
-                            </div>
-                            <button class=\"btn-primary\" style=\"padding: 0.5rem 1rem; font-size: 0.875rem;\" onclick=\"addToCart(6)\">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class=\"text-center mt-4\">
-                <a href=\"products.html\" class=\"btn-lg btn-outline\" style=\"border: 2px solid var(--orange-500); color: var(--orange-500);\">
-                    View All Products →
-                </a>
-            </div>
-        </div>
-    </section>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
 
-    <!-- Why Shop With Us -->
-    <section class=\"section section-alt\">
-        <div class=\"container\">
-            <div class=\"section-header\">
-                <h2>Why Shop With Us?</h2>
-                <p>Your satisfaction is our priority</p>
-            </div>
-            
-            <div class=\"grid grid-3\">
-                <div class=\"feature-card\">
-                    <div class=\"feature-icon\">🚚</div>
-                    <h3>Fast & Free Shipping</h3>
-                    <p>Free shipping on orders over $50. Get your products delivered in 3-5 business days.</p>
-                </div>
-                
-                <div class=\"feature-card\">
-                    <div class=\"feature-icon\">🛡️</div>
-                    <h3>Quality Guaranteed</h3>
-                    <p>Every product is carefully inspected. 100% satisfaction guarantee or your money back.</p>
-                </div>
-                
-                <div class=\"feature-card\">
-                    <div class=\"feature-icon\">💳</div>
-                    <h3>Secure Payments</h3>
-                    <p>Shop with confidence using our secure payment system. Multiple payment options available.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="nav-actions">
+      <button class="icon-btn">🛒</button>
+      <button class="icon-btn">👤</button>
+      <button class="btn-primary">Shop Now</button>
+    </div>
 
-    <!-- Testimonials -->
-    <section class=\"section\">
-        <div class=\"container\">
-            <div class=\"section-header\">
-                <h2>What Our Customers Say</h2>
-                <p>Join thousands of happy customers</p>
-            </div>
-            
-            <div class=\"grid grid-3\">
-                <div class=\"card\">
-                    <div class=\"card-content\">
-                        <div class=\"rating\" style=\"margin-bottom: 1rem;\">
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                        </div>
-                        <p style=\"font-style: italic; margin-bottom: 1.5rem; color: var(--gray-700);\">
-                            \"Love shopping at BishtDrop! Fast shipping, great prices, and the quality is always top-notch. My go-to store for everything!\"
-                        </p>
-                        <div style=\"display: flex; align-items: center; gap: 0.75rem;\">
-                            <img src=\"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150\" alt=\"Sarah Johnson\" style=\"width: 48px; height: 48px; border-radius: 50%; object-fit: cover;\">
-                            <div>
-                                <div style=\"font-weight: 600; color: var(--gray-900);\">Sarah Johnson</div>
-                                <div style=\"font-size: 0.875rem; color: var(--gray-600);\">Verified Customer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class=\"card\">
-                    <div class=\"card-content\">
-                        <div class=\"rating\" style=\"margin-bottom: 1rem;\">
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                        </div>
-                        <p style=\"font-style: italic; margin-bottom: 1.5rem; color: var(--gray-700);\">
-                            \"Best online shopping experience I've had. The customer service is amazing and my order arrived earlier than expected!\"
-                        </p>
-                        <div style=\"display: flex; align-items: center; gap: 0.75rem;\">
-                            <img src=\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150\" alt=\"Michael Chen\" style=\"width: 48px; height: 48px; border-radius: 50%; object-fit: cover;\">
-                            <div>
-                                <div style=\"font-weight: 600; color: var(--gray-900);\">Michael Chen</div>
-                                <div style=\"font-size: 0.875rem; color: var(--gray-600);\">Verified Customer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class=\"card\">
-                    <div class=\"card-content\">
-                        <div class=\"rating\" style=\"margin-bottom: 1rem;\">
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                            <span class=\"star filled\">★</span>
-                        </div>
-                        <p style=\"font-style: italic; margin-bottom: 1.5rem; color: var(--gray-700);\">
-                            \"I've ordered multiple times and never been disappointed. Quality products, great deals, and hassle-free returns. Highly recommend!\"
-                        </p>
-                        <div style=\"display: flex; align-items: center; gap: 0.75rem;\">
-                            <img src=\"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150\" alt=\"Emily Rodriguez\" style=\"width: 48px; height: 48px; border-radius: 50%; object-fit: cover;\">
-                            <div>
-                                <div style=\"font-weight: 600; color: var(--gray-900);\">Emily Rodriguez</div>
-                                <div style=\"font-size: 0.875rem; color: var(--gray-600);\">Verified Customer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </div>
+</nav>
 
-    <!-- CTA Section -->
-    <section class=\"hero\" style=\"padding: 5rem 1rem;\">
-        <div class=\"hero-content\">
-            <h2 style=\"font-size: 3rem; font-weight: bold; color: white; margin-bottom: 1.5rem;\">
-                Start Shopping Today!
-            </h2>
-            <p style=\"font-size: 1.25rem; color: var(--gray-300); margin-bottom: 2.5rem;\">
-                Browse thousands of products and get amazing deals delivered to your doorstep.
-            </p>
-            <a href=\"products.html\" class=\"btn-lg btn-orange\">
-                Explore Products →
-            </a>
-        </div>
-    </section>
+<!-- HERO SECTION -->
+<section class="hero">
 
-    <!-- Footer -->
-    <footer class=\"footer\">
-        <!-- Newsletter -->
-        <div class=\"newsletter\">
-            <div class=\"newsletter-container\">
-                <div>
-                    <h3>Stay Updated</h3>
-                    <p>Subscribe to our newsletter for the latest products and offers</p>
-                </div>
-                <form class=\"newsletter-form\" onsubmit=\"handleNewsletterSubmit(event)\">
-                    <input type=\"email\" placeholder=\"Enter your email\" required>
-                    <button type=\"submit\" class=\"btn-primary\">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        
-        <!-- Footer Content -->
-        <div class=\"footer-content\">
-            <div>
-                <div class=\"footer-logo\">
-                    <div class=\"logo-icon\">BD</div>
-                    <span class=\"logo-text\">BishtDrop</span>
-                </div>
-                <p style=\"margin-bottom: 1rem; font-size: 0.875rem;\">
-                    Your trusted dropshipping partner. We handle the logistics so you can focus on growing your business.
-                </p>
-                <div class=\"social-links\">
-                    <a href=\"#\" class=\"social-btn\" aria-label=\"Facebook\">f</a>
-                    <a href=\"#\" class=\"social-btn\" aria-label=\"Twitter\">𝕏</a>
-                    <a href=\"#\" class=\"social-btn\" aria-label=\"Instagram\">📷</a>
-                    <a href=\"#\" class=\"social-btn\" aria-label=\"LinkedIn\">in</a>
-                </div>
-            </div>
-            
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href=\"index.html\">Home</a></li>
-                    <li><a href=\"products.html\">Products</a></li>
-                    <li><a href=\"services.html\">Services</a></li>
-                    <li><a href=\"about.html\">About Us</a></li>
-                    <li><a href=\"contact.html\">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href=\"#\">Fast Shipping</a></li>
-                    <li><a href=\"#\">Quality Guarantee</a></li>
-                    <li><a href=\"#\">Secure Payments</a></li>
-                    <li><a href=\"#\">Easy Returns</a></li>
-                    <li><a href=\"#\">24/7 Support</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4>Contact Us</h4>
-                <ul style=\"font-size: 0.875rem;\">
-                    <li style=\"margin-bottom: 0.75rem;\">
-                        📍 123 Business Ave, Suite 100<br>New York, NY 10001
-                    </li>
-                    <li>📞 +1 (555) 123-4567</li>
-                    <li>📧 info@bishtdrop.com</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Footer Bottom -->
-        <div class=\"footer-bottom\">
-            <div class=\"footer-bottom-content\">
-                <p>© 2024 BishtDrop. All rights reserved.</p>
-                <div class=\"footer-links\">
-                    <a href=\"#\">Privacy Policy</a>
-                    <a href=\"#\">Terms of Service</a>
-                    <a href=\"#\">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <div class="hero-content">
 
-    <script src=\"script.js\"></script>
+    <div class="hero-badge">
+      ⚡ Trending Products Available
+    </div>
+
+    <h1>
+      Shop Smart With
+      <span class="gradient-text">BishtDrop</span>
+    </h1>
+
+    <p>
+      Discover premium gadgets, fashion, accessories, fitness products,
+      and much more at amazing prices.
+    </p>
+
+    <div class="hero-actions">
+      <a href="products.html" class="btn-lg btn-orange">
+        Shop Now →
+      </a>
+
+      <button class="btn-lg btn-outline">
+        Explore More
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+  <div class="stats-container">
+
+    <div class="stat-item">
+      <h3>5000+</h3>
+      <p>Products</p>
+    </div>
+
+    <div class="stat-item">
+      <h3>10K+</h3>
+      <p>Happy Customers</p>
+    </div>
+
+    <div class="stat-item">
+      <h3>45+</h3>
+      <p>Countries</p>
+    </div>
+
+    <div class="stat-item">
+      <h3>24/7</h3>
+      <p>Support</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Featured Products</h2>
+      <p>Most trending products this week</p>
+    </div>
+
+    <div class="grid grid-3">
+
+      <!-- PRODUCT 1 -->
+      <div class="card">
+
+        <div class="card-img-container">
+          <img
+            src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500"
+            class="card-img"
+            alt="Earbuds"
+          >
+
+          <div class="card-badge">$79</div>
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-category">
+            Electronics
+          </div>
+
+          <h3 class="card-title">
+            Wireless Earbuds
+          </h3>
+
+          <p class="card-text">
+            Noise cancellation premium earbuds.
+          </p>
+
+          <div class="card-footer">
+
+            <div class="rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+            </div>
+
+            <button
+              class="btn-primary"
+              onclick="addToCart(1)"
+            >
+              Add
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="card">
+
+        <div class="card-img-container">
+          <img
+            src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500"
+            class="card-img"
+            alt="Watch"
+          >
+
+          <div class="card-badge">$129</div>
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-category">
+            Smart Gadgets
+          </div>
+
+          <h3 class="card-title">
+            Smart Watch
+          </h3>
+
+          <p class="card-text">
+            Fitness tracking and health monitoring.
+          </p>
+
+          <div class="card-footer">
+
+            <div class="rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+            </div>
+
+            <button
+              class="btn-primary"
+              onclick="addToCart(2)"
+            >
+              Add
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="card">
+
+        <div class="card-img-container">
+          <img
+            src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500"
+            class="card-img"
+            alt="Bottle"
+          >
+
+          <div class="card-badge">$24</div>
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-category">
+            Fitness
+          </div>
+
+          <h3 class="card-title">
+            Steel Water Bottle
+          </h3>
+
+          <p class="card-text">
+            Premium insulated water bottle.
+          </p>
+
+          <div class="card-footer">
+
+            <div class="rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+            </div>
+
+            <button
+              class="btn-primary"
+              onclick="addToCart(3)"
+            >
+              Add
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="section section-alt">
+
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Why Choose Us?</h2>
+      <p>Premium shopping experience</p>
+    </div>
+
+    <div class="grid grid-3">
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          🚚
+        </div>
+
+        <h3>Fast Delivery</h3>
+
+        <p>
+          Super fast shipping all over India.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          🛡️
+        </div>
+
+        <h3>Secure Shopping</h3>
+
+        <p>
+          Safe and secure payment methods.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          ⭐
+        </div>
+
+        <h3>Top Quality</h3>
+
+        <p>
+          Premium verified products only.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="hero" style="padding: 80px 20px;">
+
+  <div class="hero-content">
+
+    <h2 style="color:white; font-size: 2.5rem;">
+      Ready To Shop?
+    </h2>
+
+    <p>
+      Explore amazing products with exciting deals.
+    </p>
+
+    <a href="products.html" class="btn-lg btn-orange">
+      Start Shopping →
+    </a>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div>
+
+      <div class="footer-logo">
+        <div class="logo-icon">BD</div>
+        <span class="logo-text">BishtDrop</span>
+      </div>
+
+      <p>
+        Modern e-commerce shopping website with premium products.
+      </p>
+
+    </div>
+
+    <div>
+
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4>Contact</h4>
+
+      <ul>
+        <li>📞 +91 8849322203</li>
+        <li>📧 ametayuvraj984gmail.com</li>
+        <li>📍 India</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <div class="footer-bottom-content">
+      <p>© 2026 BishtDrop. All Rights Reserved.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- JAVASCRIPT FILE -->
+<script src="script.js"></script>
+
 </body>
 </html>
-"
-Observation: Create successful: /app/html_website/index.html
